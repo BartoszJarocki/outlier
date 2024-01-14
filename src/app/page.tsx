@@ -13,7 +13,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center p-4 md:p-24">
       <main className="space-y-8 max-w-xl">
         <section className="flex flex-col min-h-0 gap-y-4">
-          <h1 className="text-6xl font-bold inline-flex items-center gap-4 -ml-10">
+          <h1 className="text-6xl font-bold inline-flex items-center gap-4 md:-ml-10">
             <span className="h-6 w-6 bg-white animate-pulse"></span> Outlier
           </h1>
           <p className="text-lg text-wrap">
@@ -28,8 +28,8 @@ export default function Home() {
             applications.
           </p>
         </section>
-        <section className="flex gap-x-6 -m-6 items-stretch">
-          <Card className="max-w-96 flex-1">
+        <section className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
+          <Card className="md:max-w-96 flex-1">
             <CardHeader>
               <CardTitle>One request at a time</CardTitle>
               <CardDescription className="max-w-md">
@@ -57,7 +57,7 @@ export default function Home() {
               </div>
             </CardFooter>
           </Card>
-          <Card className="max-w-96 flex-1">
+          <Card className="md:max-w-96 flex-1">
             <CardHeader>
               <CardTitle>MVP</CardTitle>
               <CardDescription className="max-w-md">
