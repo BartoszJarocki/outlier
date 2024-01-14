@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
+import { cn } from "../lib/utils";
 
-const generalSans = localFont({
-  src: "../fonts/GeneralSans-Variable.ttf",
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Outlier - different kind of Next.js development studio",
@@ -21,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={generalSans.className}>{children}</body>
+      <body className={cn("dark", inter.className)}>{children}</body>
     </html>
   );
 }
