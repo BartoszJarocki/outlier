@@ -12,10 +12,17 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center p-4 md:p-24">
       <main className="space-y-8 max-w-xl">
-        <section className="flex flex-col min-h-0 gap-y-4">
-          <h1 className="text-6xl font-bold inline-flex items-center gap-4 md:-ml-10">
-            <span className="h-6 w-6 bg-white animate-pulse"></span> Outlier
-          </h1>
+        <section className="flex flex-col min-h-0 gap-y-6">
+          <div>
+            <h1 className="text-6xl font-bold inline-flex items-center gap-4 md:-ml-10">
+              <span className="h-6 w-6 bg-white animate-pulse"/>Outlier
+            </h1>
+            <div className="text-xs font-mono text-pretty">
+              /ˈaʊtˌlaɪ(ə)r/ - a person or thing that is different from or in a
+              position away from others in the group
+            </div>
+          </div>
+
           <p className="text-lg text-wrap">
             <a href="https://jarocki.me" target="_blank" className="underline">
               I&apos;m Bartosz
@@ -39,7 +46,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside text-sm">
-                <li>Adding a new feature to your Next.js application</li>
+                <li>Implementing a new feature</li>
                 <li>Removing tech debt</li>
                 <li>Upgrading dependencies</li>
                 <li>Migration to the new app router</li>
@@ -59,7 +66,7 @@ export default function Home() {
           </Card>
           <Card className="md:max-w-96 flex-1">
             <CardHeader>
-              <CardTitle>MVP</CardTitle>
+              <CardTitle>New product</CardTitle>
               <CardDescription className="max-w-md">
                 Creating a new Next.js application from scratch including
                 deployment and domain configuration.
