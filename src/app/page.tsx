@@ -17,9 +17,14 @@ import {
 
 const FAQ_ITEMS = [
   {
-    title: "How is Outlier different than other agencies?",
+    title: "How is this different than other agencies?",
     description:
       "Outlier operates without signing any contracts. You subscribe, I start work. You can pause or cancel at any time using the customer portal. Also, Outlier is just one person (me), so know who will be working on your project. This also means limited availability.",
+  },
+  {
+    title: "Who is this for?",
+    description:
+      "This offer works particularly well with early stage startups that does not always have the budget and time to hire a full-time developer. With Outlier, they get an experienced developer without worrying about contacts, time commitment or spending time on finding the right person.",
   },
   {
     title: "What happens after I subscribe?",
@@ -41,7 +46,20 @@ const FAQ_ITEMS = [
     description:
       "That's ok. You can pause your subscription when the work is done and return when you have additional request.",
   },
-];
+  {
+    title: "Are there any refunds?",
+    description:
+      "Straight talk: No refunds after the work has been started. If for some reason you're not happy after seeing the work results, you can cancel your subscription at any time.",
+  },
+] as const;
+
+type Availability = "available" | "limited" | "unavailable";
+
+const AvailabilityStyles: Record<Availability, string> = {
+  available: "text-green-500 border-green-500",
+  limited: "text-yellow-500 border-yellow-500",
+  unavailable: "text-red-500 border-red-500",
+};
 
 export default function Home() {
   return (
@@ -73,9 +91,11 @@ export default function Home() {
         </section>
         <section className="flex min-h-0 gap-y-2 justify-start gap-x-4 items-center">
           <h2 className="text-sm">Current availability</h2>
-          <p>
-            <Badge variant="outline">Limited</Badge>
-          </p>
+          <div>
+            <Badge variant="outline" className={AvailabilityStyles["limited"]}>
+              Limited
+            </Badge>
+          </div>
         </section>
         <section className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
           <Card className="md:max-w-96 flex-1">
@@ -138,7 +158,7 @@ export default function Home() {
             </CardFooter>
           </Card>
         </section>
-        <section>
+        <section className="flex flex-col min-h-0">
           <h2 className="text-xl">FAQ</h2>
           {FAQ_ITEMS.map((item) => (
             <Accordion type="single" collapsible key={item.title}>
@@ -148,6 +168,21 @@ export default function Home() {
               </AccordionItem>
             </Accordion>
           ))}
+        </section>
+        <section className="flex flex-col min-h-0 gap-y-2">
+          <h2 className="text-xl">Contact</h2>
+
+          <div className="flex flex-col md:flex-row gap-2 items-center">
+            <p>
+              If you are still not convinced you can book a meeting with me to
+              clarify any outstanding concerns.
+            </p>
+            <Button asChild variant="outline">
+              <a href="https://consultly.com/s/bartosz-jarocki" target="_blank">
+                Book a meeting
+              </a>
+            </Button>
+          </div>
         </section>
       </main>
     </div>
