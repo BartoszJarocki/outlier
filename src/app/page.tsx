@@ -60,7 +60,7 @@ export default function Home() {
             </CardContent>
             <CardFooter className="flex flex-col gap-y-2">
               <Button className="w-full" asChild>
-                <a href="https://buy.stripe.com/6oE00LeATf0p8wM9AA">
+                <a href="https://buy.stripe.com/5kA28TakD19zeVa8wx">
                   Subscribe
                 </a>
               </Button>
