@@ -1,3 +1,4 @@
+import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import {
   Card,
@@ -15,7 +16,8 @@ export default function Home() {
         <section className="flex flex-col min-h-0 gap-y-6">
           <div>
             <h1 className="text-6xl font-bold inline-flex items-center gap-4 md:-ml-10">
-              <span className="h-6 w-6 bg-white animate-pulse"/>Outlier
+              <span className="h-6 w-6 bg-white animate-pulse" />
+              Outlier
             </h1>
             <div className="text-xs font-mono text-pretty">
               /ˈaʊtˌlaɪ(ə)r/ - a person or thing that is different from or in a
@@ -23,21 +25,24 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="text-lg text-wrap">
+          <p className="text-base text-wrap">
             <a href="https://jarocki.me" target="_blank" className="underline">
-              I&apos;m Bartosz
-            </a>
-            , and I run a small development studio specializing in creating and
-            maintaining{" "}
+              I&apos;m Bartosz, an experienced product engineer based in Poland.
+            </a>{" "}
+            Outlier is a tiny development studio where I focus on on helping
+            startups build and improve their products based on{" "}
             <a href="https://nextjs.org" target="_blank">
               Next.js
             </a>{" "}
-            applications.
+            framework.
           </p>
         </section>
         <section className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
           <Card className="md:max-w-96 flex-1">
             <CardHeader>
+              <div>
+                <Badge>5999€ per month</Badge>
+              </div>
               <CardTitle>One request at a time</CardTitle>
               <CardDescription className="max-w-md">
                 Suitable for existing Next.js application. Requires granting
@@ -47,7 +52,7 @@ export default function Home() {
             <CardContent>
               <ul className="list-disc list-inside text-sm">
                 <li>Implementing a new feature</li>
-                <li>Removing tech debt</li>
+                <li>Fixing performance issues</li>
                 <li>Upgrading dependencies</li>
                 <li>Migration to the new app router</li>
                 <li>Bug fixing</li>
@@ -56,7 +61,7 @@ export default function Home() {
             <CardFooter className="flex flex-col gap-y-2">
               <Button className="w-full" asChild>
                 <a href="https://buy.stripe.com/6oE00LeATf0p8wM9AA">
-                  Subscribe now - 4000€/month
+                  Subscribe
                 </a>
               </Button>
               <div className="text-xs text-muted-foreground">
@@ -66,7 +71,10 @@ export default function Home() {
           </Card>
           <Card className="md:max-w-96 flex-1">
             <CardHeader>
-              <CardTitle>New product</CardTitle>
+              <div>
+                <Badge>Requires budget of 15 000€+ </Badge>
+              </div>
+              <CardTitle>Bring idea to life</CardTitle>
               <CardDescription className="max-w-md">
                 Creating a new Next.js application from scratch including
                 deployment and domain configuration.
@@ -74,7 +82,7 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <ul className="list-disc list-inside text-sm text-">
-                <li>Minimalist design with growing in mind</li>
+                <li>Minimalist design</li>
                 <li>Tech stack that scales</li>
                 <li>Domain configuration</li>
                 <li>Deployment</li>
