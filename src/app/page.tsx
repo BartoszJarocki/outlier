@@ -14,6 +14,13 @@ import {
   CardContent,
   CardFooter,
 } from "../components/ui/card";
+import {
+  CanalDigitalLogo,
+  ClevertechLogo,
+  EvercastLogo,
+  MobileVikingsLogo,
+  ParabolLogo,
+} from "../img/logos";
 
 const FAQ_ITEMS = [
   {
@@ -64,7 +71,7 @@ const AvailabilityStyles: Record<Availability, string> = {
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col items-center p-4 md:p-24">
-      <main className="space-y-8 max-w-xl">
+      <main className="space-y-12 max-w-xl">
         <section className="flex flex-col min-h-0 gap-y-6">
           <div>
             <h1 className="text-6xl font-bold inline-flex items-center gap-4 md:-ml-10">
@@ -88,15 +95,20 @@ export default function Home() {
             </a>{" "}
             framework.
           </p>
-        </section>
-        <section className="flex min-h-0 gap-y-2 justify-start gap-x-4 items-center">
-          <h2 className="text-sm">Current availability</h2>
-          <div>
-            <Badge variant="outline" className={AvailabilityStyles["limited"]}>
-              Limited
-            </Badge>
+
+          <div className="flex min-h-0 gap-y-2 justify-start gap-x-4 items-center">
+            <h2 className="text-sm">Current availability</h2>
+            <div>
+              <Badge
+                variant="outline"
+                className={AvailabilityStyles["limited"]}
+              >
+                Limited
+              </Badge>
+            </div>
           </div>
         </section>
+
         <section className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
           <Card className="md:max-w-96 flex-1">
             <CardHeader>
@@ -158,8 +170,30 @@ export default function Home() {
             </CardFooter>
           </Card>
         </section>
+
+        <section className="flex flex-col min-h-0 gap-y-4">
+          <h2 className="text-xl font-bold">Companies I worked with</h2>
+          <div className="grid grid-col-2 md:grid-cols-3 gap-4 grayscale items-center justify-center">
+            <a href="https://evercast.com">
+              <EvercastLogo className="h-8 w-auto" />
+            </a>
+            <a href="https://clevertech.biz">
+              <ClevertechLogo className="h-8 w-auto" />
+            </a>
+            <a href="https://parabol.co">
+              <ParabolLogo className="h-6 w-auto" />
+            </a>
+            <a href="https://mobilevikings.pl">
+              <MobileVikingsLogo className="h-14 w-auto" />
+            </a>
+            <a href="https://www.allente.no">
+              <CanalDigitalLogo className="h-8 w-auto" />
+            </a>
+          </div>
+        </section>
+
         <section className="flex flex-col min-h-0">
-          <h2 className="text-xl">FAQ</h2>
+          <h2 className="text-xl font-bold">FAQ</h2>
           {FAQ_ITEMS.map((item) => (
             <Accordion type="single" collapsible key={item.title}>
               <AccordionItem value={item.title}>
@@ -169,8 +203,9 @@ export default function Home() {
             </Accordion>
           ))}
         </section>
+
         <section className="flex flex-col min-h-0 gap-y-2">
-          <h2 className="text-xl">Contact</h2>
+          <h2 className="text-xl font-bold">Contact</h2>
 
           <div className="flex flex-col md:flex-row gap-2 items-center">
             <p>
