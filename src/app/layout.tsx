@@ -5,7 +5,7 @@ import "./globals.css";
 import { Space_Grotesk } from "next/font/google";
 import { cn } from "../lib/utils";
 
-const inter = Space_Grotesk({ subsets: ["latin"] });
+const spaceGroteskFont = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Outlier - different kind of Next.js development studio",
@@ -38,7 +38,7 @@ export default function RootLayout({
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
-      <body className={cn("dark", inter.className)}>
+      <body className={cn("dark", spaceGroteskFont.className)}>
         {children}
         <Analytics />
       </body>

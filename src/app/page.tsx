@@ -88,7 +88,7 @@ export default function Home() {
             <a href="https://jarocki.me" target="_blank" className="underline">
               I&apos;m Bartosz, an experienced product engineer.
             </a>{" "}
-            Outlier is a tiny development studio where I focus on on helping
+            Outlier is a tiny development studio where I focus on helping
             startups build and improve their products based on{" "}
             <a href="https://nextjs.org" target="_blank" className="underline">
               Next.js
@@ -211,20 +211,20 @@ export default function Home() {
         <section className="flex flex-col min-h-0 gap-y-2">
           <h2 className="text-xl font-bold">Contact</h2>
 
-          <div className="flex flex-col md:flex-row gap-2 items-center">
-            <p>
-              If you have any outstanding concerns or questions, feel free to
-              book a meeting with me, or{" "}
-              <a href="mailto:bartosz.jarocki@hey.com" className="underline">
-                send me an email
-              </a>
-              .
-            </p>
-            <Button asChild variant="outline">
-              <a href="https://consultly.com/s/bartosz-jarocki" target="_blank">
-                Book a meeting
-              </a>
-            </Button>
+          <div>
+            If you have any outstanding concerns or questions, feel free to{" "}
+            <a
+              href="https://consultly.com/s/bartosz-jarocki"
+              target="_blank"
+              className="underline"
+            >
+              book a meeting
+            </a>{" "}
+            with me, or{" "}
+            <a href="mailto:bartosz.jarocki@hey.com" className="underline">
+              send me an email
+            </a>
+            .
           </div>
         </section>
       </main>
