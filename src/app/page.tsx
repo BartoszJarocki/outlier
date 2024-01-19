@@ -90,7 +90,7 @@ export default function Home() {
             </a>{" "}
             Outlier is a tiny development studio where I focus on on helping
             startups build and improve their products based on{" "}
-            <a href="https://nextjs.org" target="_blank">
+            <a href="https://nextjs.org" target="_blank" className="underline">
               Next.js
             </a>{" "}
             framework.
@@ -173,21 +173,21 @@ export default function Home() {
 
         <section className="flex flex-col min-h-0 gap-y-4">
           <h2 className="text-xl font-bold">Companies I worked with</h2>
-          <div className="grid grid-col-2 md:grid-cols-3 gap-4 grayscale items-center justify-center">
+          <div className="flex flex-wrap gap-x-8 gap-y-4 grayscale items-center justify-start">
             <a href="https://evercast.com">
-              <EvercastLogo className="h-8 w-auto" />
+              <EvercastLogo className="w-32 h-auto" />
             </a>
             <a href="https://clevertech.biz">
-              <ClevertechLogo className="h-8 w-auto" />
+              <ClevertechLogo className="w-32 h-auto" />
             </a>
             <a href="https://parabol.co">
-              <ParabolLogo className="h-6 w-auto" />
+              <ParabolLogo className="w-32 h-auto" />
             </a>
             <a href="https://mobilevikings.pl">
-              <MobileVikingsLogo className="h-14 w-auto" />
+              <MobileVikingsLogo className="w-32 h-auto" />
             </a>
             <a href="https://www.allente.no">
-              <CanalDigitalLogo className="h-8 w-auto" />
+              <CanalDigitalLogo className="w-32 h-auto" />
             </a>
           </div>
         </section>
@@ -196,9 +196,13 @@ export default function Home() {
           <h2 className="text-xl font-bold">FAQ</h2>
           {FAQ_ITEMS.map((item) => (
             <Accordion type="single" collapsible key={item.title}>
-              <AccordionItem value={item.title}>
-                <AccordionTrigger>{item.title}</AccordionTrigger>
-                <AccordionContent>{item.description}</AccordionContent>
+              <AccordionItem value={item.description}>
+                <AccordionTrigger className="text-start text-pretty">
+                  {item.title}
+                </AccordionTrigger>
+                <AccordionContent className="text-pretty">
+                  {item.description}
+                </AccordionContent>
               </AccordionItem>
             </Accordion>
           ))}
@@ -209,8 +213,12 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row gap-2 items-center">
             <p>
-              If you are still not convinced you can book a meeting with me to
-              clarify any outstanding concerns.
+              If you have any outstanding concerns or questions, feel free to
+              book a meeting with me, or{" "}
+              <a href="mailto:bartosz.jarocki@hey.com" className="underline">
+                send me an email
+              </a>
+              .
             </p>
             <Button asChild variant="outline">
               <a href="https://consultly.com/s/bartosz-jarocki" target="_blank">

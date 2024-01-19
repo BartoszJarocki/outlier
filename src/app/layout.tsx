@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 import { Space_Grotesk } from "next/font/google";
@@ -37,7 +38,10 @@ export default function RootLayout({
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
-      <body className={cn("dark", inter.className)}>{children}</body>
+      <body className={cn("dark", inter.className)}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
