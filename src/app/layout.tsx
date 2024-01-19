@@ -8,7 +8,7 @@ import { cn } from "../lib/utils";
 const spaceGroteskFont = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Outlier - different kind of Next.js development studio",
+  title: "Outlier",
   description:
     "A tiny development studio focused on helping startups build and improve their products based on Next.js framework.",
   openGraph: {
