@@ -14,6 +14,8 @@ import {
   CardContent,
   CardFooter,
 } from "../components/ui/card";
+import { MagicCard, MagicContainer } from "../components/ui/magic-card";
+import Marquee from "../components/ui/marquee";
 import {
   CanalDigitalLogo,
   ClevertechLogo,
@@ -62,6 +64,32 @@ const FAQ_ITEMS = [
 
 type Availability = "available" | "limited" | "unavailable";
 
+const MarqueeLogos = () => {
+  return (
+    <div className="relative flex flex-col items-center justify-center grayscale overflow-hidden -mx-6">
+      <Marquee className="[--gap:2rem] flex flex-row items-center justify-center">
+        <a href="https://evercast.com">
+          <EvercastLogo className="w-32 h-auto" />
+        </a>
+        <a href="https://clevertech.biz">
+          <ClevertechLogo className="w-32 h-auto" />
+        </a>
+        <a href="https://parabol.co">
+          <ParabolLogo className="w-32 h-auto" />
+        </a>
+        <a href="https://mobilevikings.pl">
+          <MobileVikingsLogo className="w-32 h-auto" />
+        </a>
+        <a href="https://www.allente.no">
+          <CanalDigitalLogo className="w-32 h-auto" />
+        </a>
+      </Marquee>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+    </div>
+  );
+};
+
 const AvailabilityStyles: Record<Availability, string> = {
   available: "text-green-500 border-green-500",
   limited: "text-yellow-500 border-yellow-500",
@@ -109,8 +137,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
-          <Card className="md:max-w-96 flex-1">
+        <MagicContainer className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
+          <MagicCard className="flex-1">
             <CardHeader>
               <div>
                 <Badge>6000€ per month</Badge>
@@ -140,8 +168,9 @@ export default function Home() {
                 Pause or cancel anytime
               </div>
             </CardFooter>
-          </Card>
-          <Card className="md:max-w-96 flex-1">
+          </MagicCard>
+
+          <MagicCard className="flex-1">
             <CardHeader>
               <div>
                 <Badge>Requires budget of 15 000€+</Badge>
@@ -168,28 +197,12 @@ export default function Home() {
                 Delivery time depends on the scope
               </div>
             </CardFooter>
-          </Card>
-        </section>
+          </MagicCard>
+        </MagicContainer>
 
         <section className="flex flex-col min-h-0 gap-y-4">
           <h2 className="text-xl font-bold">Companies I worked with</h2>
-          <div className="flex flex-wrap gap-x-8 gap-y-4 grayscale items-center justify-start">
-            <a href="https://evercast.com">
-              <EvercastLogo className="w-32 h-auto" />
-            </a>
-            <a href="https://clevertech.biz">
-              <ClevertechLogo className="w-32 h-auto" />
-            </a>
-            <a href="https://parabol.co">
-              <ParabolLogo className="w-32 h-auto" />
-            </a>
-            <a href="https://mobilevikings.pl">
-              <MobileVikingsLogo className="w-32 h-auto" />
-            </a>
-            <a href="https://www.allente.no">
-              <CanalDigitalLogo className="w-32 h-auto" />
-            </a>
-          </div>
+          <MarqueeLogos />
         </section>
 
         <section className="flex flex-col min-h-0">
