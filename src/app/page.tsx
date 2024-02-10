@@ -140,7 +140,7 @@ export default function Home() {
         <MagicContainer className="flex flex-col md:flex-row gap-6 md:-m-6 items-stretch">
           <MagicCard className="flex-1">
             <CardHeader>
-              <div>
+              <div className="pb-3">
                 <Badge>6000€ per month</Badge>
               </div>
               <CardTitle>One request at a time</CardTitle>
@@ -172,7 +172,7 @@ export default function Home() {
 
           <MagicCard className="flex-1">
             <CardHeader>
-              <div>
+              <div className="pb-3">
                 <Badge>Requires budget of 15 000€+</Badge>
               </div>
               <CardTitle>Bring idea to life</CardTitle>
@@ -191,7 +191,7 @@ export default function Home() {
             </CardContent>
             <CardFooter className="flex flex-col gap-y-2">
               <Button className="w-full" asChild>
-                <a href="mailto:bartosz.jarocki@hey.com">Contact us</a>
+                <a href="mailto:bartosz.jarocki@hey.com">Write me an email</a>
               </Button>
               <div className="text-xs text-muted-foreground">
                 Delivery time depends on the scope
