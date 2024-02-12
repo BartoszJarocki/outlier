@@ -66,8 +66,8 @@ type Availability = "available" | "limited" | "unavailable";
 
 const MarqueeLogos = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center grayscale overflow-hidden -mx-6">
-      <Marquee className="[--gap:2rem] flex flex-row items-center justify-center">
+    <div className="relative grayscale overflow-hidden -mx-6">
+      <Marquee className="[--gap:2rem] flex flex-row items-center justify-center w-screen">
         <a href="https://evercast.com">
           <EvercastLogo className="w-32 h-auto" />
         </a>
